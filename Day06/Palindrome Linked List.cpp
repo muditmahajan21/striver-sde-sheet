@@ -25,7 +25,6 @@ bool isPalindrome(ListNode* head) {
         ListNode* dummy = head;
         
         while(slow) {
-            cout << slow -> val << " ";
             if(dummy -> val != slow -> val) return false;
             dummy = dummy -> next;
             slow = slow -> next;
