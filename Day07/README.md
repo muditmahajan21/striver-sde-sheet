@@ -1,11 +1,5 @@
 # Day7
 
-## Rotate a LinkedList
-
-Link: [https://leetcode.com/problems/rotate-list/description/]
-
-- 
-
 ## 3Sum
 
 Link: [https://leetcode.com/problems/3sum/]
@@ -56,5 +50,34 @@ Link: [https://leetcode.com/problems/max-consecutive-ones/]
 - If 1, increment temp by 1 else make temp 0.
 - Check for the maximum value of temp at every loop iteration.
 - Return answer (max temp at any time).
+
+Time Complexity: O(n)
+
+## Copy List with Random Pointer
+
+Link: [https://leetcode.com/problems/copy-list-with-random-pointer/]
+
+- Add the copy nodes in the original linked list nodes ahead of the original one as below: 
+```
+A -> A' -> B -> B' -> ... -> N -> N'
+```
+- To mark the random pointers, traverse the linked list and assign the random pointer accordingly to the previous original nodes.
+- Again traverse the linked list and get the new nodes in a linked list attached to a dummy node.
+- Parallely, disconnect the old nodes and return the dummy head of the new linked list.
+
+Time Complexity: O(n)
+
+## Rotate List
+
+Link: [https://leetcode.com/problems/rotate-list/]
+
+- Find the length of the linked list and a pointer to the last node of the linked list.
+- Make the linked list circular by making the next of the last node point to the head.
+- If k is greater than n(length of linked list), find k by k = k % n.
+- Find the ending point of the linked list by end = n - k.
+- Run the pointer at the end of the linked list for end.
+- Make the node present at the next of the pointer as head.
+- Disconnect the circular linked list by makign the next of the pointer node as null.
+- Return the new head.
 
 Time Complexity: O(n)
