@@ -11,3 +11,15 @@ Link: [https://practice.geeksforgeeks.org/problems/n-meetings-in-one-room]
 - Also, initializa answer with 1 as there must be atleast one meeting than can take place.
 
 Time Complexity: O(nlogn)
+
+## Minimum Platforms 
+
+Link: [https://practice.geeksforgeeks.org/problems/minimum-platforms]
+
+- Sort both arrays.
+- For each arrival, check if departure is greater than or equal to the arrival.
+- If yes, increment the answer variable.
+- Else, increment the counter for the departure.
+
+Time Complexity: O(nlogn)
+
