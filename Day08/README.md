@@ -47,3 +47,18 @@ Link: [https://practice.geeksforgeeks.org/problems/fractional-knapsack]
 - Break the loop and return the answer.
 
 Time Complexity: O(nlogn)
+
+## Number of Coins
+
+Link: [https://practice.geeksforgeeks.org/problems/number-of-coins]
+
+- Create a dp array of V + 1 size and initialize the array to INT_MAX.
+- Set the 0-th value or base value of the dp array as zero,
+- For each cost from 1 to V, run a loop on i.
+- Run a loop on each coin of the array from 0 to M using j.
+- If the current coin value is less than the i cose, then
+- Find a temp_res as the dp array value of dp[i - coins[j]].
+- If the temp_res is not INT_MAX and the temp_res + 1 is less than the dp value at i, then set the dp value at i as res + 1.
+- At the end, check if the value at dp[V] is INT_MAX or not. If yes, return -1, else return the value present at the index.
+
+Time Complexity: O(M * V)
