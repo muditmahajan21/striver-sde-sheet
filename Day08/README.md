@@ -35,3 +35,15 @@ Link: [https://practice.geeksforgeeks.org/problems/job-sequencing-problem]
 - Return a vector of the answer count and the profit.
 
 Time Complexity: O(nlogn)
+
+##  Fractional Knapsack
+
+Link: [https://practice.geeksforgeeks.org/problems/fractional-knapsack]
+
+- Sort the array on the basis of the (value / weight) by using a custom sort function.
+- Initialize a double answer variable and a int current_weight variable.
+- Run a loop from 0 to n and if the current weight + the weight of the current index are less than or equal to the total weight, then add the weight to current weight and the profit to the answer.
+- Else, add the value of the item according to the fraction of the weight and the remain capacity.
+- Break the loop and return the answer.
+
+Time Complexity: O(nlogn)
